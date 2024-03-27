@@ -1,0 +1,58 @@
+body{
+    display: grid;
+    grid-template-areas: 
+    "cabeca cabeca cabeca"
+    "aside corpo corpo"
+    "rodape rodape rodape";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+}
+header{
+    background-color:red;
+    grid-area: cabeca;
+    height: 180px;
+}
+aside{
+    grid-area:aside ;
+    background-color: red;
+    width: 0px;
+}
+main{
+    grid-area: corpo;
+    background-color: rgb(255, 255, 255);
+}
+footer{
+    grid-area:rodape ;
+    background-color:rgb(59, 58, 58);}
+@media screen and (max-width:800px){
+    body{
+        grid-template-areas: 
+        "cabeca"
+        "aside"
+        "corpo"
+        "rodape";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+    }
+}
+@media screen and (max-width:400px){
+        body{
+            grid-template-areas: 
+            "cabeca"
+            "aside"
+            "corpo"
+            "rodape";
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto auto;
+    
+}
+}
+.logo{
+    width: 200px;
+    position: absolute;
+    top: 35px;     
+    left: 90px;
+}
+.card img{
+    width: 150px
+}
